@@ -1,0 +1,11 @@
+.col-auto{
+    height: 100px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.pill{
+    width: 200px !important;
+}

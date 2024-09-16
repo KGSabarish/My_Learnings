@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complex innerHTML Example</title>
+</head>
+
+<body>
+    <h1>Complex innerHTML Example</h1>
+    <div id="complexContent">
+        <p>Original complex content.</p>
+    </div>
+    <button id="changeComplexContentButton">Change Complex Content</button>
+
+    <script>
+        // Get the complexContent div and the button
+        var complexContentDiv = document.getElementById('complexContent');
+        var changeComplexContentButton = document.getElementById('changeComplexContentButton');
+
+        // Add a click event listener to the button
+        changeComplexContentButton.addEventListener('click', function () {
+            // Change the innerHTML of the complexContent div
+            complexContentDiv.innerHTML = `
+        <h2>New Complex Content</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <p style="color: red;">This is a styled paragraph.</p>
+    `;
+        });
+
+    </script>
+</body>
+
+</html>

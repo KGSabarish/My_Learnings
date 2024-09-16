@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unload Event Example</title>
+</head>
+<body>
+    <h1>Unload Event Example</h1>
+    <p>Try closing this tab or navigating to another page to trigger the unload event.</p>
+
+    <script>
+        window.addEventListener('unload', function(event) {
+            console.log('Page is being unloaded.');
+            // Perform cleanup tasks here
+            // Note: alert and other UI changes might not work in the unload event
+        });
+    </script>
+</body>
+</html>

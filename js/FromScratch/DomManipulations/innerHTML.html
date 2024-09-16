@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>innerHTML Example</title>
+</head>
+
+<body>
+    <h1>innerHTML Example</h1>
+    <div id="content">
+        <p>This is the original content.</p>
+    </div>
+    <button id="changeContentButton">Change Content</button>
+
+    <script>
+        // Get the content div and the button
+        var contentDiv = document.getElementById('content');
+        var changeContentButton = document.getElementById('changeContentButton');
+
+        // Add a click event listener to the button
+        changeContentButton.addEventListener('click', function () {
+            // Change the innerHTML of the content div
+            contentDiv.innerHTML = '<h1>This is the new content.</h1>';
+        });
+
+    </script>
+</body>
+
+</html>

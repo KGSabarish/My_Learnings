@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Onblur Event Example</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateInput(input) {
+            var errorElement = document.getElementById('error');
+            // Check if the input value is empty
+            if (input.value === '') {
+                // Display an error message
+                errorElement.textContent = 'Username is required.';
+            } else {
+                // Clear the error message if the input is not empty
+                errorElement.textContent = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onblur="validateInput(this)">
+        <span id="error" class="error"></span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

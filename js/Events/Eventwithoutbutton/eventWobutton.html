@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Text</title>
+</head>
+<body>
+  <input type="text" id="sourceInput" placeholder="Type here..." oninput="moveText()">
+  <input type="text" id="destinationInput" placeholder="Destination...">
+  
+  <script>
+    function moveText() {
+      // Get the value from the source input
+      var sourceInput = document.getElementById('sourceInput');
+      var destinationInput = document.getElementById('destinationInput');
+      
+      // Move the value from the source input to the destination input
+      destinationInput.value = sourceInput.value;
+    }
+  </script>
+</body>
+</html>

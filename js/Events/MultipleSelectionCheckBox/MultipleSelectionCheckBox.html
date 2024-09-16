@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concatenate Selected Inputs</title>
+</head>
+<body>
+  <input type="checkbox" id="option1" value="Sabarish">
+  <label for="option1">Sabarish</label><br>
+  <input type="checkbox" id="option2" value="Omkumar">
+  <label for="option2">Omkumar</label><br>
+  <input type="checkbox" id="option3" value="Kishan">
+  <label for="option3">Kishan</label><br>
+  <br>
+  <button onclick="concatSelectedInputs()">Concatenate Selected Inputs</button>
+  <br><br>
+  <input type="text" id="selectedOptions" readonly>
+  
+  <script>
+    function concatSelectedInputs() {
+      var selectedInputs = '';
+      
+      // Get all checkboxes
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      
+      // Loop through checkboxes to find selected ones
+      checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+          selectedInputs += checkbox.value + ', ';
+        }
+      });
+      
+      // Remove trailing comma and space
+      selectedInputs = selectedInputs.slice(0, -2);
+      
+      // Display concatenated inputs in the text box
+      var selectedOptionsTextBox = document.getElementById('selectedOptions');
+      selectedOptionsTextBox.value = selectedInputs;
+      
+      // Print concatenated inputs in the console
+      console.log(selectedInputs);
+    }
+  </script>
+</body>
+</html>

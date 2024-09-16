@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Selections in Dropdown</title>
+</head>
+<body>
+  <select id="multiDropdown" multiple onchange="updateSelectedOptions()">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+    <option value="Option A">Option A</option>
+    <option value="Option B">Option B</option>
+    <option value="Option C">Option C</option>
+  </select>
+  <br>
+  <br>
+  <input type="text" id="selectedOptions" readonly>
+  
+  <script>
+    var previousSelections = '';
+
+    function updateSelectedOptions() {
+      var multiDropdown = document.getElementById('multiDropdown');
+      var selectedOptions = '';
+      
+      // Concatenate the selected options from the dropdown
+      for (var i = 0; i < multiDropdown.options.length; i++) {
+        if (multiDropdown.options[i].selected) {
+          selectedOptions += multiDropdown.options[i].value + ', ';
+        }
+      }
+      
+      // Remove trailing comma and space
+      selectedOptions = selectedOptions.slice(0, -2);
+
+      // Concatenate with previous selections
+      selectedOptions = previousSelections + (previousSelections ? ', ' : '') + selectedOptions;
+
+      // Update previous selections
+      previousSelections = selectedOptions;
+
+      // Display concatenated options in the text box
+      var selectedOptionsTextBox = document.getElementById('selectedOptions');
+      selectedOptionsTextBox.value = selectedOptions;
+
+      // Print concatenated options in the console
+      console.log(selectedOptions);
+    }
+  </script>
+</body>
+</html>

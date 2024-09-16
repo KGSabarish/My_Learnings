@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Learnings
+        </title>
+    </head>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="var"></p>
+<p id="let"></p>
+<p id="const"></p>
+<p id="array1"></p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<div id="myDiv">This is a div.</div>
+<script>
+    // var v = "First"
+    // let l
+    // l = true
+    // l =false
+    // v = "Second"
+    // const c ="Xplocode";
+
+    // var values = [78,25,30];
+
+ 
+    // //document.getElementById("demo").innerHTML = "'John' is " + typeof("a") + "<br><br>";
+    // // document.getElementById("demo").innerHTML = prompt(String);
+    // // // console.log('Prompt Checking:'+ prompt('Sabarish'));
+    // // document.getElementById("demo").innerHTML = confirm(String);
+    // document.getElementById("demo").innerHTML = parseInt("10.6");
+    // document.getElementById("demo1").innerHTML = parseFloat("10.6");
+    // document.getElementById("demo2").innerHTML = Number("10.8");
+    // document.getElementById("var").innerHTML = v;
+    // document.getElementById("let").innerHTML = l;
+    // document.getElementById("const").innerHTML = c;
+    // document.write(values[0]);
+
+    const today = new Date();
+    console.log("Today :", new Date() )
+    console.log("Today :", new Date(1998,11,17) )
+    console.log('Year :', today.getMonth())
+
+    const parant = document.getElementById("myDiv");
+    console.log("Parant:", parant); 
+    const newpara = document.createElement('h1');
+    const newline = "Testing Text"
+    newpara.append(newline);
+    parant.appendChild(newpara)
+    console.log("newpara:", newpara)
+    parent.innerHTML="Xplocode"
+    console.log();
+</script>
+
+</body>
+</html> 

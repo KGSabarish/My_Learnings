@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beforeunload Event Example</title>
+</head>
+<body>
+    <h1>Beforeunload Event Example</h1>
+    <p>Try closing this tab or navigating to another page to trigger the beforeunload event.</p>
+
+    <script>
+        window.addEventListener('beforeunload', function(event) {
+            // Perform tasks before the page unloads
+            console.log('Page is about to be unloaded.');
+            // Display a confirmation dialog
+            event.preventDefault();
+            event.returnValue = ''; // Required for some browsers to display a dialog
+        });
+    </script>
+</body>
+</html>

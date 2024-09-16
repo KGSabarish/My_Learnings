@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js File Upload and Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="bg-secondary ">
+    <div id="app" class="container">
+        <div class="row">
+            <h1>File Upload and Download</h1>
+            <div class="col-4 upload-section  p-3 m-2">
+                <input type="file" @change="handleFileUpload" ref="fileInput">
+            </div>
+            <div class="col-4 upload-section  p-3 m-2">
+                <button @click="uploadFile">Upload</button>
+            </div>
+            
+            <div class="col-4 download-section  p-3 m-2">
+                <h2>Uploaded Files</h2>
+                <ul>
+                    <li v-for="file in files" :key="file.name">
+                        <a :href="file.content" :download="file.name">{{ file.name }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>

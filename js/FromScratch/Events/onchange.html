@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onchange Event Example</title>
+</head>
+
+<body>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <br><br>
+
+    <label for="color">Choose a color:</label>
+    <select id="color" name="color">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        // Get the input and select elements
+        var usernameInput = document.getElementById('username');
+        var colorSelect = document.getElementById('color');
+
+        // Add an onchange event listener to the input element
+        usernameInput.onchange = function () {
+            alert('Username changed to: ' + usernameInput.value);
+        };
+
+        // Add an onchange event listener to the select element
+        colorSelect.onchange = function () {
+            alert('Color selected: ' + colorSelect.value);
+        };
+
+    </script>
+</body>
+
+</html>

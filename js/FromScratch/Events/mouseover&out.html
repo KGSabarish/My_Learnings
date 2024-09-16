@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover Event Example</title>
+    <style>
+        #hoverDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="hoverDiv" onmouseover="changeColor(this)" onmouseout="revertColor(this)">Hover over me!</div>
+
+    <script>
+        function changeColor(element) {
+            element.style.backgroundColor = 'lightgreen';
+        }
+
+        function revertColor(element) {
+            element.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+</html>

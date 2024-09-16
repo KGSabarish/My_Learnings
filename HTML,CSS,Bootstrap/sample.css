@@ -1,0 +1,48 @@
+.button {
+    background-color: #100a64; 
+    border:15px solid  rgb(8, 8, 8);
+    border-radius: 50px;
+    color: rgb(243, 232, 232);
+    padding: 10px 34px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .button1 {
+    background-color: #100a64; /* Green */
+    border:15px solid  rgb(8, 8, 8);
+    border-radius: 10px;
+    color: rgb(243, 232, 232);
+    padding: 10px 34px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .center{
+    text-align: center;
+    margin: auto;
+    width: auto;
+    padding: 40px 32px;
+  }
+
+h2{
+    padding: 50px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+}
+
+h3{
+    padding: 50px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c92727;
+}
+
+body{
+    background-image: element();
+}
+
+.spinner-border{
+    
+}

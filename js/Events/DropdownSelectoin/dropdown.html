@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Inputs</title>
+</head>
+<body>
+  <select id="inputSelector" onchange="displaySelectedInput()">
+    <option value="">Select an input</option>
+    <option value="Sabarish">Sabarish</option>
+    <option value="Kishan">Kishan</option>
+    <option value="Om Murugan">Om Murugan</option>
+  </select>
+  <br>
+  <br>
+
+  <input type="text" id="selectedInput" placeholder="Text box" readonly>
+  
+  <script>
+    function displaySelectedInput() {
+      var inputSelector = document.getElementById('inputSelector');
+      var selectedInput = document.getElementById('selectedInput');
+      
+      // Get the selected value from the dropdown
+      var selectedValue = inputSelector.options[inputSelector.selectedIndex].value;
+      
+      // Display the selected value in the text box
+      selectedInput.value = selectedValue;
+    }
+  </script>
+</body>
+</html>

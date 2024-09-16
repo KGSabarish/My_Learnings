@@ -1,0 +1,63 @@
+.container{
+    background-color: darkgray;
+    padding: 10px;
+}
+.row{
+    background-color: blanchedalmond;
+    padding: 10px;
+    height: 200px;
+}
+.col,.col-2{
+    background-color: rgb(88, 129, 243);
+    padding: 10px;
+    border: 1px solid black;
+}
+body{
+    margin-top: 70px;
+}
+
+body::before{
+    content: 'XS';
+    color: orangered;
+    font-size: 30px;
+    position: fixed;
+    font-weight: bold;
+    top: 10px;
+    left: 10px;
+}
+
+@media(min-width: 576px){
+    body::before{
+        content: 'SM';
+    }
+}
+
+
+@media(min-width: 768px){
+    body::before{
+        content: 'MD';
+    }
+}
+
+@media(min-width: 992px){
+    body::before{
+        content: 'LG';
+    }
+}
+
+@media(min-width: 1200px){
+    body::before{
+        content: 'XL';
+    }
+}
+
+@media(min-width: 1400px){
+    body::before{
+        content: 'XXL';
+    }
+}
+
+
+.container{
+    background-color: blanchedalmond;
+}

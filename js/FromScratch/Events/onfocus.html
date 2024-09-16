@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Onfocus Event Example</title>
+    <style>
+        .help {
+            color: blue;
+            display: none;
+        }
+    </style>
+    <script>
+        function showHelp() {
+            document.getElementById('help').style.display = 'inline';
+        }
+
+        function hideHelp() {
+            document.getElementById('help').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onfocus="showHelp()" onblur="hideHelp()">
+        <label id="help" class="help">Enter your username.</label>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

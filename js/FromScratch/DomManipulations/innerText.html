@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>innerText Example</title>
+</head>
+
+<body>
+    <div id="textContent">
+        <p>This is some <span>inner</span> text.</p>
+    </div>
+    <button onclick="changeText()">Change Text</button>
+
+    <script> // Function to change the text content using innerText
+        function changeText() {
+            var textContentDiv = document.getElementById('textContent');
+            textContentDiv.innerText = 'Xplcoode';
+        }
+    </script>
+</body>
+
+</html>

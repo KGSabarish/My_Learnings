@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submit Event Example</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="error" style="color: rgb(14, 10, 10);"></p>
+
+    <script>
+        // Get the form element
+        var form = document.getElementById('myForm');
+        var errorElement = document.getElementById('error');
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function (event) {
+            // Get the value of the username input field
+            var username = document.getElementById('username').value;
+
+            // Perform validation
+            if (username === '') {
+                // Prevent form submission
+                event.preventDefault();
+
+                // Display error message
+                errorElement.textContent = 'Username is required.';
+            } else if(username===username){
+                alert("UserName:" +username+ " Submitted Successfully")
+            }
+             else {
+                // Clear error message if validation is successful
+                errorElement.textContent = '';
+            }
+        });
+
+    </script>
+</body>
+
+</html>

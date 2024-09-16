@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <style>
+        .form-element {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-element">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div class="form-element">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+
+    <div class="form-element">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+    </div>
+
+    <div class="form-element">
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+    </div>
+
+    <div class="form-element">
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+
+    <div class="form-element">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="mexico">Mexico</option>
+        </select>
+    </div>
+
+    <div class="form-element">
+        <button type="button">Click Me!</button>
+    </div>
+
+    <div class="form-element">
+        <form action="/submit" method="post">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="form-element">
+        <form>
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <div class="form-element">
+        <label for="file">Upload file:</label>
+        <input type="file" id="file" name="file">
+    </div>
+
+    <div class="form-element">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+    </div>
+
+    <div class="form-element">
+        <label for="appt">Select a time:</label>
+        <input type="time" id="appt" name="appt">
+    </div>
+
+    <div class="form-element">
+        <label for="vol">Volume:</label>
+        <input type="range" id="vol" name="vol" min="0" max="100">
+    </div>
+</body>
+</html>

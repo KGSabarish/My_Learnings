@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resize Event Example</title>
+    <style>
+        #sizeInfo {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Resize Event Example</h1>
+    <p id="sizeInfo">Resize the browser window to see the current size.</p>
+
+    <script>
+        // Get the sizeInfo element 
+        var sizeInfo = document.getElementById('sizeInfo');
+
+        // Function to update the size info
+        function updateSizeInfo() {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            sizeInfo.textContent = 'Width: ' + width + 'px, Height: ' + height + 'px';
+        }
+
+        // Add a resize event listener to the window
+        window.addEventListener('resize', updateSizeInfo);
+
+        // Initial call to display the size info
+        updateSizeInfo();
+
+    </script>
+</body>
+
+</html>

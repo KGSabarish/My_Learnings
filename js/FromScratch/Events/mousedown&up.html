@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mousedown and Mouseup Event Example</title>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mousedown and Mouseup Event Example</h1>
+    <div id="colorBox">Click me</div>
+
+    <script>
+        // Get the colorBox element
+        var colorBox = document.getElementById('colorBox');
+
+        colorBox.addEventListener('mouseover', function(){
+            colorBox.style.backgroundColor='white';
+            colorBox.textContent='Mouse Over'
+        })
+        colorBox.addEventListener('mouseout', function(){
+            colorBox.style.backgroundColor='lightblue';
+            colorBox.textContent = 'Click me';
+        })
+        // Add a mousedown event listener to the colorBox element
+        colorBox.addEventListener('mousedown', function () {
+            colorBox.style.backgroundColor = 'lightcoral';
+            colorBox.textContent = 'Mouse Down';
+        });
+
+        // Add a mouseup event listener to the colorBox element
+        colorBox.addEventListener('mouseup', function () {
+            colorBox.style.backgroundColor = 'lightblue';
+            colorBox.textContent = 'Mouse Up';
+        });
+
+        colorBox.addEventListener('mousemove', function () {
+            colorBox.style.backgroundColor = 'lightred';
+            colorBox.textContent = 'Click me';
+        });
+    </script>
+</body>
+
+</html>

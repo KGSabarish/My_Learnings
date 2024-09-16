@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Inputs</title>
+</head>
+<body>
+  <input type="radio" id="option1" name="inputOption" value="Xplocode" onclick="displaySelectedInput()">
+  <label for="Xplocode">Xplocode</label><br>
+  <input type="radio" id="option2" name="inputOption" value="InfoTech" onclick="displaySelectedInput()">
+  <label for="InfoTech">InfoTech</label><br>
+  <input type="radio" id="Xplocode" name="inputOption" value="Pvt.Ltd." onclick="displaySelectedInput()">
+  <label for="Pvt.Ltd.">Pvt.Ltd.</label><br><br>
+
+
+  <input type="text" id="selectedInput" readonly>
+  
+  <script>
+    function displaySelectedInput() {
+      var selectedInput = document.querySelector('input[name="inputOption"]:checked');
+      var selectedInputValue = selectedInput ? selectedInput.value : '';
+      
+      var displayBox = document.getElementById('selectedInput');
+      displayBox.value = selectedInputValue;
+    }
+  </script>
+</body>
+</html>
